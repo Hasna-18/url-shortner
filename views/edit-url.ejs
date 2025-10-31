@@ -1,0 +1,19 @@
+<h2>Edit URL</h2>
+
+<% if (error) { %>
+    <p class="error"><%= error %></p>
+<% } %>
+
+<form method="POST" action="/users/edit-url/<%= url._id %>">
+    <div>
+        <input name="title" type="text" value="<%= url.title %>" required />
+    </div>
+    <div>
+        <input name="originalUrl" type="url" value="<%= url.originalUrl %>" required />
+    </div>
+    <button type="submit">Update URL</button>
+</form>
+
+<div class="nav-links">
+    <a href="/url-home">← Back to Home</a>
+</div>

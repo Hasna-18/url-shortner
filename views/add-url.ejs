@@ -1,0 +1,19 @@
+<h2>Add a New URL</h2>
+
+<% if (error) { %>
+    <p class="error"><%= error %></p>
+<% } %>
+
+<form method="POST" action="/users/add-url">
+    <div>
+        <input name="title" type="text" placeholder="Title" required />
+    </div>
+    <div>
+        <input name="originalUrl" type="url" placeholder="Link" required />
+    </div>
+    <button type="submit">Shorten URL</button>
+</form>
+
+<div class="close">
+    <button><a href="/url-home">close</a></button>
+</div>

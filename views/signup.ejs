@@ -1,0 +1,24 @@
+<h1>Sign Up</h1>
+
+<% if (errors && errors.length > 0) { %>
+    <% errors.forEach(error => { %>
+        <p class="error"><%= error.msg %></p>
+    <% }) %>
+<% } %>
+
+<form method="POST" action="/users/signup">
+    <div>
+        <input name="email" type="email" placeholder="Email address" required />
+    </div>
+    <div>
+        <input name="password" type="password" placeholder="Password" required />
+    </div>
+    <div>
+        <input name="conform_password" type="password" placeholder="Confirm password" required />
+    </div>
+    <button type="submit">Sign Up</button>
+</form>
+
+<div>
+    <a href="/users/login">Already have an account?</a>
+</div>
